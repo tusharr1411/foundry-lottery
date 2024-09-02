@@ -47,7 +47,7 @@ contract DeployRaffle is Script {
 
         vm.stopBroadcast();
 
-        // Add consumer to it
+        // Add it as consumer to vrdCoordinator
         AddConsumer addConsumer = new AddConsumer();
         addConsumer.addConsumer(address(raffle), networkConfig.subId, networkConfig.vrfCoordinator, networkConfig.account);
 
